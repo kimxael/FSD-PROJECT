@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukoon - Mental Health Support for Students</title>
+    <meta name="description" content="Digital Mental Health & Psychological Support System for Students">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <section id="landing" class="page active">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <h1>Sukoon</h1>
+                        <span class="tagline">Find Your Peace</span>
+                    </div>
+                    <nav class="nav">
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Your Digital Companion for Mental Wellness</h2>
+                    <p class="hero-description">
+                        Sukoon is a comprehensive mental health platform designed specifically for students. 
+                        Track your mood, practice mindfulness, access coping strategies, and find professional resources - all in one safe space.
+                    </p>
+                    <button class="btn btn--primary btn--lg get-started-btn" onclick="navigateToSection('dashboard')">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Overview -->
+        <section id="features" class="features-overview">
+            <div class="container">
+                <h2 class="section-title">How Sukoon Supports Your Mental Health Journey</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Mood Tracker</h3>
+                        <p>Monitor your emotional well-being with our private mood journal and gain insights into your mental health patterns.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧘</div>
+                        <h3>Mindfulness Tools</h3>
+                        <p>Access guided meditation, breathing exercises, and relaxation techniques designed for busy student life.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Coping Library</h3>
+                        <p>Discover evidence-based strategies and quick tips for managing stress, anxiety, and academic pressure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📞</div>
+                        <h3>Resource Directory</h3>
+                        <p>Find verified mental health resources, campus services, and professional support when you need it most.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About Sukoon</h2>
+                    <p>
+                        Mental health challenges among students are on the rise. Sukoon bridges the gap between students and mental health support by providing accessible, evidence-based tools and resources. Our platform empowers students to take control of their mental wellness journey.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>60%</h3>
+                            <p>of students experience anxiety</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>accessible support</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>privacy guaranteed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Need Help?</h3>
+                        <p>Our support team is here to help you make the most of Sukoon.</p>
+                        <div class="contact-item">
+                            <strong>Email:</strong> support@sukoon.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Emergency:</strong> If you're in crisis, please contact your local emergency services or call 1-800-123-4567
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="handleContactForm(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="page dashboard">
+        <header class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-nav">
+                    <div class="logo-small" onclick="navigateToSection('landing')">
+                        <h2>Sukoon</h2>
+                    </div>
+                    <nav class="dashboard-nav-items">
+                        <button class="nav-btn active" onclick="navigateToSection('dashboard')">Dashboard</button>
+                        <button class="nav-btn" onclick="navigateToSection('landing')">Home</button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="welcome-section">
+                <h2 class="welcome-title">Welcome to Your Mental Health Hub</h2>
+                <p class="welcome-text">Choose a tool below to begin your wellness journey today.</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card" onclick="navigateToSection('mood-tracker')">
+                    <div class="card-icon">📊</div>
+                    <h3>Mood Tracker</h3>
+                    <p>Log and monitor your daily emotional state</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateToSection('mindfulness')">
+                    <div class="card-icon">🧘</div>
+                    <h3>Mindfulness Tools</h3>
+                    <p>Guided exercises for relaxation and focus</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateToSection('chatbot')">
+                    <div class="card-icon">💬</div>
+                    <h3>AI Companion</h3>
+                    <p>Talk through your thoughts with a supportive AI</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateToSection('coping-library')">
+                    <div class="card-icon">📚</div>
+                    <h3>Coping Library</h3>
+                    <p>Evidence-based strategies for managing stress</p>
+                    <div class="card-arrow">→</div>
+                </div>
+
+                <div class="dashboard-card" onclick="navigateToSection('resources')">
+                    <div class="card-icon">📞</div>
+                    <h3>Resource Directory</h3>
+                    <p>Professional support and emergency contacts</p>
+                    <div class="card-arrow">→</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="chatbot" class="page feature-page">
+        <div class="feature-header">
+            <div class="container">
+                <button class="back-btn" onclick="navigateToSection('dashboard')">← Back to Dashboard</button>
+                <h2 class="feature-title">Aura, your AI Companion</h2>
+                <p class="feature-subtitle">A safe space to talk about what's on your mind</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="chatbot-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Initial Bot Message -->
+                    <div class="message bot-message">
+                        <div class="message-avatar">A</div>
+                        <div class="message-content">
+                            <p>Hello! I'm Aura. How are you feeling today?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <form id="chat-form" class="chat-form">
+                        <input type="text" id="chat-input" class="form-control" placeholder="Type your message here..." autocomplete="off">
+                        <button type="submit" id="chat-send-btn" class="btn btn--primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mood Tracker -->
+    <section id="mood-tracker" class="page feature-page">
+        <div class="feature-header">
+            <div class="container">
+                <button class="back-btn" onclick="navigateToSection('dashboard')">← Back to Dashboard</button>
+                <h2 class="feature-title">Mood Tracker</h2>
+                <p class="feature-subtitle">How are you feeling today?</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mood-tracker-content">
+                <div class="mood-selector">
+                    <div class="mood-options" id="mood-options">
+                        <!-- Mood options will be populated by JavaScript -->
+                    </div>
+                    <div class="mood-note">
+                        <label class="form-label" for="mood-note">Add a note (optional)</label>
+                        <textarea id="mood-note" class="form-control" placeholder="What's on your mind?"></textarea>
+                    </div>
+                    <button class="btn btn--primary" onclick="saveMood()">Log Mood</button>
+                </div>
+
+                <div class="mood-history">
+                    <h3>Your Mood History</h3>
+                    <div id="mood-history-list" class="mood-history-list">
+                        <!-- Mood history will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mindfulness Tools -->
+    <section id="mindfulness" class="page feature-page">
+        <div class="feature-header">
+            <div class="container">
+                <button class="back-btn" onclick="navigateToSection('dashboard')">← Back to Dashboard</button>
+                <h2 class="feature-title">Mindfulness Tools</h2>
+                <p class="feature-subtitle">Take a moment to center yourself</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mindfulness-content">
+                <div class="exercises-grid" id="exercises-grid">
+                    <!-- Exercises will be populated by JavaScript -->
+                </div>
+
+                <div class="timer-section" id="timer-section" style="display: none;">
+                    <div class="timer-card">
+                        <h3 id="current-exercise-title">Exercise Timer</h3>
+                        <div class="timer-display" id="timer-display">5:00</div>
+                        <div class="timer-controls">
+                            <button class="btn btn--secondary" onclick="startTimer()">Start</button>
+                            <button class="btn btn--secondary" onclick="pauseTimer()">Pause</button>
+                            <button class="btn btn--outline" onclick="resetTimer()">Reset</button>
+                        </div>
+                        <button class="btn btn--outline" onclick="showExercises()">Back to Exercises</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coping Library -->
+    <section id="coping-library" class="page feature-page">
+        <div class="feature-header">
+            <div class="container">
+                <button class="back-btn" onclick="navigateToSection('dashboard')">← Back to Dashboard</button>
+                <h2 class="feature-title">Coping Library</h2>
+                <p class="feature-subtitle">Strategies to help you through difficult moments</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="coping-content">
+                <div class="search-section">
+                    <input type="text" id="coping-search" class="form-control" placeholder="Search coping strategies..." onkeyup="filterCopingStrategies()">
+                </div>
+
+                <div class="categories-filter">
+                    <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                    <button class="filter-btn" onclick="filterByCategory('Anxiety')">Anxiety</button>
+                    <button class="filter-btn" onclick="filterByCategory('Stress')">Stress</button>
+                    <button class="filter-btn" onclick="filterByCategory('Sleep')">Sleep</button>
+                </div>
+
+                <div class="strategies-grid" id="strategies-grid">
+                    <!-- Strategies will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Directory -->
+    <section id="resources" class="page feature-page">
+        <div class="feature-header">
+            <div class="container">
+                <button class="back-btn" onclick="navigateToSection('dashboard')">← Back to Dashboard</button>
+                <h2 class="feature-title">Resource Directory</h2>
+                <p class="feature-subtitle">Professional support when you need it</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="resources-content">
+                <div class="emergency-banner">
+                    <h3>🚨 In Crisis?</h3>
+                    <p>If you're having thoughts of self-harm or suicide, please reach out immediately:</p>
+                    <div class="emergency-contacts">
+                        <strong>Emergency Services: 911</strong> | <strong>Crisis Hotline: 1-800-123-4567</strong>
+                    </div>
+                </div>
+
+                <div class="resources-grid" id="resources-grid">
+                    <!-- Resources will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Success!</h3>
+            <p id="success-message">Action completed successfully.</p>
+            <button class="btn btn--primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
